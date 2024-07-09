@@ -1,0 +1,100 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Apply Google Font to the entire body */
+    margin: 0;
+    padding: 0;
+    background-color: #171722; /* Dark navy blue background */
+}
+
+.home-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #171722; /* Dark navy blue background */
+}
+
+.task-scheduler-image {
+    max-width: 100%;
+    height: auto;
+    animation: moveUpDown 1.5s infinite alternate; /* Animation added for moving up and down */
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.home-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px; /* Adjust as per your design */
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #22222c; /* Dark gray background */
+}
+
+.home-text-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff; /* White text */
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.home-text-container p {
+    font-size: 1.25rem;
+    color: #cccccc; /* Light gray text */
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-weight: 500;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    font-weight: 500;
+}
+
+@media (max-width: 500px) {
+    .home-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .task-scheduler-image {
+        margin-bottom: 20px;
+    }
+
+    .home-text-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .home-text-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-text-container p {
+        font-size: 1rem;
+    }
+}

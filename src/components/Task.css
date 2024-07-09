@@ -1,0 +1,67 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* Apply Google Font to the entire task container */
+.add-task-container,
+.task-list-container,
+.set-reminder-container {
+  font-family: "Roboto", sans-serif;
+  background-color: #171722;
+  color: #ffffff;
+  margin: 1rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-task-container h2,
+.task-list-container h2,
+.set-reminder-container h2 {
+  font-weight: 500;
+}
+
+.add-task-container .form-label,
+.set-reminder-container .form-label {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.add-task-container .form-control,
+.set-reminder-container .form-control {
+  background-color: #22222c;
+  color: #ffffff;
+  border: 1px solid #6c757d;
+  border-radius: 0.5rem;
+}
+
+.add-task-container .btn-primary,
+.set-reminder-container .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-weight: 500;
+  border-radius: 1.5rem;
+}
+
+.add-task-container .btn-primary:hover,
+.set-reminder-container .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.task-list-container .table {
+  width: 100%;
+  color: #ffffff;
+  background-color: #2a2e3f;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+
+.task-list-container .table th,
+.task-list-container .table td {
+  vertical-align: middle;
+}
+
+.task-list-container .btn {
+  font-weight: 500;
+  border-radius: 1.5rem;
+}
