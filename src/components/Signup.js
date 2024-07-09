@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 import "./Auth.css";
 
 const Signup = () => {
@@ -19,8 +20,9 @@ const Signup = () => {
       });
       localStorage.setItem("token", response.data.token);
       navigate("/tasks");
+      toast.success("SignUp Successful");
     } catch (error) {
-      console.error("Error signing up:", error);
+      toast.error("Error signing up");
     }
   };
 

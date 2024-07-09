@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import toast from "react-hot-toast";
 import "./Task.css";
 
 const AddTask = ({ onTaskAdded }) => {
@@ -21,8 +22,15 @@ const AddTask = ({ onTaskAdded }) => {
         }
       );
       onTaskAdded(response.data);
+      toast.success("Task added successfully!");
+      setTitle("");
+      setDescription("");
+      setDueDate("");
+      setPriority("Low");
+      setReminder("");
     } catch (error) {
       console.error("Error adding task:", error);
+      toast.error("Failed to add task");
     }
   };
 

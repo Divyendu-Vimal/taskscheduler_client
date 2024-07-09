@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 import "./Auth.css";
 
 const Login = () => {
@@ -14,8 +15,9 @@ const Login = () => {
       const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/auth/login`, { email, password });
       localStorage.setItem("token", response.data.token);
       navigate("/tasks");
+      toast.success("Login Successful");
     } catch (error) {
-      console.error("Error logging in:", error);
+      toast.error("Error logging in");
     }
   };
 
